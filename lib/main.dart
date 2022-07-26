@@ -5,12 +5,13 @@ import 'package:recipe3/components/menu.dart';
 import 'package:recipe3/components/title.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
+   MyApp({Key? key}) : super(key: key);
+ String imageName = '';
+  String title = '';
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -36,12 +37,15 @@ class MyHomePage extends StatelessWidget {
       appBar: _recipeAppbar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal:20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
+          
           children: [
             RTitle(),
             RMenu(),
-            RItem()
+            RItem('coffee','Made Coffee'),
+            RItem('burger','Made Burger'),
+            RItem('pizza','Made Pizza'),
+            
           ],
         ),
       )
@@ -66,5 +70,6 @@ return AppBar(
   ],
 );
 }
+
 }
 
