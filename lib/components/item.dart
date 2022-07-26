@@ -16,7 +16,12 @@ class RItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset('assets/images/$imageName.jpeg',fit: BoxFit.cover,),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: AspectRatio(
+              aspectRatio: 2 / 1,
+              child: Image.asset('assets/images/$imageName.jpeg',fit: BoxFit.cover,)),
+          ),
           Text(title, style: TextStyle(fontSize: 25),),
           Text('Have u ever made ur own $title? Once uve tried a homemade $title, u will never go back',
           style: TextStyle(fontSize: 12,color: Colors.grey),)

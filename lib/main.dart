@@ -10,9 +10,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
    MyApp({Key? key}) : super(key: key);
- String imageName = '';
-  String title = '';
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
