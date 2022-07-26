@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:recipe3/components/item.dart';
 import 'package:recipe3/components/menu.dart';
 import 'package:recipe3/components/title.dart';
 
@@ -39,7 +40,8 @@ class MyHomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             RTitle(),
-            RMenu()
+            RMenu(),
+            RItem()
           ],
         ),
       )
